@@ -18,6 +18,11 @@ import nobullLogo from '../assets/images/nobull-logo.webp'
 import nobullImg from '../assets/images/nobull-shoe.jpg'
 import ticketmasterLogo from '../assets/images/ticketmaster-logo.jpg'
 import ticketmasterImg from '../assets/images/ticketmaster-event.jpg'
+import apparelImg from '../assets/images/apparel.webp'
+import restaurantsImg from '../assets/images/restaurants.jpg'
+import fuelImg from '../assets/images/fuel.webp'
+import rideshareImg from '../assets/images/rideshare.jpg'
+import groceriesImg from '../assets/images/groceries.jpg'
 
 export default function Home() {
   const [selected, setSelected] = useState('personal')
@@ -419,12 +424,12 @@ const rightBrands = [
 ]
 
 const leftCats = [
-  { name: 'Apparel',     bg: 'linear-gradient(180deg, #4fa4e0 0%, #1f4ea3 100%)' },
-  { name: 'Restaurants', bg: 'linear-gradient(160deg, #2b4a6b 0%, #4a6b8a 60%, #c97a4a 100%)' },
-  { name: 'Groceries',   bg: 'linear-gradient(160deg, #d4a574 0%, #a87c4d 100%)' },
+  { name: 'Apparel',     bg: `url(${apparelImg}) center top/cover no-repeat, linear-gradient(180deg, #4fa4e0 0%, #1f4ea3 100%)` },
+  { name: 'Restaurants', bg: `url(${restaurantsImg}) center/cover no-repeat, linear-gradient(160deg, #2b4a6b 0%, #4a6b8a 60%, #c97a4a 100%)` },
+  { name: 'Groceries',   bg: `url(${groceriesImg}) center top/cover no-repeat, linear-gradient(160deg, #d4a574 0%, #a87c4d 100%)` },
 ]
 
 const rightCats = [
-  { name: 'Travel', bg: 'linear-gradient(160deg, #e88a3d 0%, #c44a3a 100%)' },
-  { name: 'Fuel',   bg: 'linear-gradient(160deg, #6a8a55 0%, #3d4a3a 100%)' },
+  { name: 'Travel', bg: `url(${rideshareImg}) center top/cover no-repeat, linear-gradient(160deg, #e88a3d 0%, #c44a3a 100%)` },
+  { name: 'Fuel',   bg: `url(${fuelImg}) center top/cover no-repeat, linear-gradient(160deg, #6a8a55 0%, #3d4a3a 100%)` },
 ]

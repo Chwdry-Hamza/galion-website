@@ -128,6 +128,7 @@
   font-weight: 900;
   font-size: clamp(1.25rem, calc(1.25rem + 0.7vw * var(--p)), 2rem);
   color: #fdf6ee;
+  opacity: calc(1 - var(--p) * 0.55);
   padding: calc(0.65rem + 0.4rem * var(--p)) 0;
   letter-spacing: -0.02em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -150,7 +151,7 @@
   position: absolute;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
-  color: #fff;
+  color: #fdf6ee;
   letter-spacing: -0.04em;
   line-height: 0.9;
   font-size: clamp(2rem, calc(2rem + 9vw * var(--p)), 11vw);
@@ -170,28 +171,31 @@
 
 @media (max-width: 720px) {
   .hero-scroll__sticky {
-    padding-top: 1.75rem;
+    padding-top: 4.5rem;
   }
   .hero-scroll .hero__toggle {
-    margin-bottom: 1.25rem;
+    margin-bottom: 4rem;
   }
   .hero-card {
     --start-w: 88vw;
     --start-h: 48vh;
-    --start-top: 42vh;
+    --start-top: 58vh;
     --end-w: 100vw;
     --end-h: 100vh;
     --end-top: 0px;
-    padding: calc(6px - 6px * var(--p));
+    padding: 6px;
     border-radius: calc(24px - 24px * var(--p));
   }
   .hero-card__media {
-    border-radius: calc(6px - 6px * var(--p));
+    border-radius: 6px;
   }
   .hero-card__brand {
-    padding: calc(0.65rem - 0.65rem * var(--p)) 0;
-    font-size: calc(1.25rem - 1.25rem * var(--p));
+    padding: 0.65rem 0;
+    font-size: 1.25rem;
     overflow: hidden;
+  }
+  .hero-card__word {
+    font-size: clamp(4rem, calc(4rem + 16vw * var(--p)), 22vw);
   }
   .hero-scroll__headline-wrap { padding: 0 1.25rem; }
 }
@@ -465,6 +469,9 @@
 }
 
 @media (min-width: 721px) {
+  .cats-grid {
+    margin-top: 12rem;
+  }
   .cats-grid .brands__col--left {
     margin-top: -480px;
   }
@@ -483,7 +490,7 @@
   left: 0;
   right: 0;
   top: 50%;
-  transform: translate(0, calc(-50% + (1 - var(--cta-p)) * 80px));
+  transform: translate(0, calc(-50% - (1 - var(--cta-p)) * 120px + var(--cta-p) * 200px));
   opacity: var(--cta-p, 0);
   transition: transform 0.35s ease-out, opacity 0.35s ease-out;
   will-change: transform, opacity;
@@ -698,13 +705,15 @@
 
 .cat-card__label {
   position: absolute;
-  top: 14px;
-  left: 18px;
-  font-weight: 800;
-  font-size: 1.15rem;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: 900;
+  font-size: clamp(1.5rem, 2.4vw, 2.05rem);
   color: #ffffff;
-  letter-spacing: -0.01em;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 900px) {
@@ -772,6 +781,7 @@
     display: flex;
     position: static;
     transform: none;
+    opacity: 1;
     margin: 2.5rem auto 1rem;
     padding: 0 1rem;
   }
