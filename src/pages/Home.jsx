@@ -6,6 +6,8 @@ import payMonthlyImg from '../assets/images/pay-monthly.webp'
 import payInStoreImg from '../assets/images/surfer.png'
 import creditCardImg from '../assets/images/Free-Floating-Credit-Cards-Mockup-PSD.webp'
 import creditFinancingImg from '../assets/images/credit-card-financing.png'
+import safetyPrivacyImg from '../assets/images/pexels-gustavo-fring-4148845.jpg'
+import safetyPrivacyTopImg from '../assets/images/pexels-silverkblack-36812950.jpg'
 import adidasImg from '../assets/images/adidas-gazelle.jpg'
 import sonyImg from '../assets/images/sony-headphones.jpg'
 import adidasLogo from '../assets/images/adidas-logo.jpg'
@@ -31,6 +33,8 @@ export default function Home() {
   const scrollRef = useRef(null)
   const catsRef = useRef(null)
   const brandsRef = useRef(null)
+  const safetyRef = useRef(null)
+  const safetyRiseRef = useRef(null)
 
   useEffect(() => {
     const el = scrollRef.current
@@ -75,6 +79,71 @@ export default function Home() {
         const current = rect.top
         const progress = Math.min(Math.max((start - current) / (start - end), 0), 1)
         el.style.setProperty('--brands-p', progress.toFixed(4))
+      })
+    }
+
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      if (frame) cancelAnimationFrame(frame)
+    }
+  }, [])
+
+  useEffect(() => {
+    const el = safetyRef.current
+    if (!el) return
+
+    let frame = 0
+    const onScroll = () => {
+      if (frame) return
+      frame = requestAnimationFrame(() => {
+        frame = 0
+        const rect = el.getBoundingClientRect()
+        const vh = window.innerHeight
+        // Start fading when image center crosses viewport center; fully dull when image bottom leaves the top.
+        const imageCenter = rect.top + rect.height / 2
+        const start = vh / 2
+        const end = -rect.height / 2
+        const progress = Math.min(Math.max((start - imageCenter) / (start - end), 0), 1)
+        el.style.setProperty('--safety-p', progress.toFixed(4))
+      })
+    }
+
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      if (frame) cancelAnimationFrame(frame)
+    }
+  }, [])
+
+  useEffect(() => {
+    const el = safetyRiseRef.current
+    if (!el) return
+
+    let frame = 0
+    const onScroll = () => {
+      if (frame) return
+      frame = requestAnimationFrame(() => {
+        frame = 0
+        const rect = el.getBoundingClientRect()
+        const vh = window.innerHeight
+        const start = vh * 0.55
+        const end = vh * -1.2
+        const current = rect.top
+        const progress = Math.min(Math.max((start - current) / (start - end), 0), 1)
+        el.style.setProperty('--rise-p', progress.toFixed(4))
+        const textProgress = Math.min(progress * 4, 1)
+        el.style.setProperty('--rise-text-p', textProgress.toFixed(4))
+        const textProgressFast = Math.min(progress * 8, 1)
+        el.style.setProperty('--rise-text-p-fast', textProgressFast.toFixed(4))
+        const downProgress = Math.min(Math.max((progress - 0.25) / 0.75, 0), 1)
+        el.style.setProperty('--rise-down-p', downProgress.toFixed(4))
       })
     }
 
@@ -426,6 +495,38 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      <section className="safety-privacy">
+        <div className="container">
+          <h2 className="safety-privacy__title">
+            Safety and privacy<br />are built in
+          </h2>
+          <div ref={safetyRef} className="safety-privacy__fade">
+            <div
+              className="safety-privacy__media"
+              style={{ backgroundImage: `url(${safetyPrivacyImg})` }}
+              aria-hidden="true"
+            />
+            <div className="safety-privacy__caption">
+              <p className="safety-privacy__desc">
+                Your payments are encrypted and we don&rsquo;t share<br />your full financial info
+              </p>
+              <button type="button" className="safety-privacy__btn">
+                See How You&rsquo;re Safe
+              </button>
+            </div>
+          </div>
+          <div
+            ref={safetyRiseRef}
+            className="safety-privacy__media safety-privacy__media--bottom"
+            style={{ backgroundImage: `url(${safetyPrivacyTopImg})` }}
+          >
+            <span className="safety-privacy__word safety-privacy__word--tl">send</span>
+            <span className="safety-privacy__word safety-privacy__word--br">smarter</span>
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }
