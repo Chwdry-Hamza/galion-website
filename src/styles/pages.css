@@ -561,7 +561,7 @@
 @media (min-width: 721px) {
   .pay-stack { padding-top: 0; }
   .pay-choice { padding-bottom: 3rem; }
-  .pay-in-4__inner { max-width: 880px; }
+  .pay-in-4__inner { max-width: 1140px; }
 }
 
 .pay-stack__item {
@@ -653,39 +653,74 @@
 
 @media (min-width: 901px) {
   .pay-in-4 { padding: 0; }
-  .pay-monthly { padding-top: 0; }
+  .pay-stack { padding-bottom: 100vh; }
   .pay-stack__item {
     align-items: flex-start;
     background: transparent;
     min-height: 70vh;
     top: 18vh;
   }
-  .pay-stack__item:nth-child(2) { top: calc(18vh + 60px); }
-  .pay-stack__item:nth-child(3) { top: calc(18vh + 120px); }
+  .pay-stack__item:nth-child(2) .pay-in-4__inner { transform: translate(0, 60px); }
+  .pay-stack__item:nth-child(3) .pay-in-4__inner { transform: translate(30px, 120px); }
+  .pay-stack__item:nth-child(4) .pay-in-4__inner { transform: translate(60px, 180px); }
+  .pay-stack__item:nth-child(5) .pay-in-4__inner { transform: translate(90px, 240px); }
+  .pay-stack__item:nth-child(1) .container.pay-in-4__inner { max-width: 900px; }
+  .pay-stack__item:nth-child(1) .pay-in-4__panel,
+  .pay-stack__item:nth-child(1) .pay-in-4__media { min-height: 320px; }
   .pay-in-4__inner > * { min-width: 0; }
   .pay-in-4__title { overflow-wrap: break-word; }
 }
 
 @media (max-width: 900px) {
+  .pay-stack__item {
+    background: transparent;
+  }
   .pay-in-4__inner {
     grid-template-columns: 1fr;
   }
+  .container.pay-in-4__inner {
+    max-width: min(290px, 75vw);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
   .pay-in-4__panel {
     min-height: 0;
-    padding: 3rem 2rem;
-    gap: 2.5rem;
+    padding: 1.75rem 1.1rem;
+    gap: 1.5rem;
+  }
+  .pay-in-4__bottom {
+    width: 100%;
+    align-items: stretch;
+  }
+  .pay-in-4__desc {
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+  .pay-in-4__title {
+    font-size: 1.75rem;
+  }
+  .pay-in-4__btn {
+    align-self: flex-start;
   }
   .pay-in-4__media {
     min-height: 360px;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
+    background-position: center top;
+  }
+}
+
+br.mobile-br {
+  display: none;
+}
+@media (max-width: 900px) {
+  br.mobile-br {
+    display: inline;
   }
 }
 
 /* --- Pay Monthly variant (sky blue panel) --- */
-.pay-monthly {
-  padding-top: 0;
-}
-
 .pay-in-4__panel--blue {
   background: #5ec8ff;
   color: #001435;
@@ -711,6 +746,34 @@
   background-size: cover;
 }
 
+.pay-in-4__media--surfer {
+  background-position: center 35%;
+  background-size: cover;
+}
+
+.pay-in-4__media--monthly {
+  background-position: center 65%;
+  background-size: cover;
+}
+
+.pay-in-4__media--financing {
+  background-position: center 25%;
+  background-size: cover;
+}
+
+@media (max-width: 900px) {
+  .pay-in-4__media--surfer {
+    background-position: center 30%;
+  }
+  .pay-in-4__media--monthly {
+    background-position: center 60%;
+  }
+  .pay-in-4__media--financing {
+    background-position: center 30%;
+    background-size: cover;
+  }
+}
+
 /* --- Pay Monthly In Store variant (light gray panel) --- */
 .pay-in-4__panel--gray {
   background: #e6e6e6;
@@ -719,6 +782,17 @@
 
 .pay-in-4__panel--gray .pay-in-4__title,
 .pay-in-4__panel--gray .pay-in-4__desc {
+  color: #001435;
+}
+
+/* --- Cashback variant (peach panel) --- */
+.pay-in-4__panel--peach {
+  background: #f5dfcb;
+  color: #001435;
+}
+
+.pay-in-4__panel--peach .pay-in-4__title,
+.pay-in-4__panel--peach .pay-in-4__desc {
   color: #001435;
 }
 
