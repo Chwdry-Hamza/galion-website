@@ -1,7 +1,7 @@
 .about-page {
   background: #ffffff;
   color: #001435;
-  min-height: 100vh;
+  min-height: 65vh;
 }
 
 /* --- Sub navigation --- */
@@ -96,7 +96,7 @@
 /* --- Hero --- */
 .about-hero {
   background: #ffffff;
-  padding: 4rem 0 6rem;
+  padding: 3rem 0 4rem;
 }
 
 .about-hero__inner {
@@ -125,6 +125,12 @@
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 30px 60px rgba(0, 20, 53, 0.12);
+}
+
+.about-hero__placeholder {
+  font-size: 1.1rem;
+  color: #6a3d1c;
+  margin: 0;
 }
 
 @media (max-width: 900px) {

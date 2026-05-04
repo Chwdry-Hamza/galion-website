@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom'
 
 const primaryLinks = [
   { label: 'About', to: '/about' },
-  { label: 'Privacy Policy', to: '/privacy-policy' },
-  { label: 'Terms and Conditions', to: '/terms' },
 ]
 
 const secondaryLinks = []
