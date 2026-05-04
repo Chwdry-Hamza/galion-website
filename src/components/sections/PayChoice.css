@@ -1,0 +1,31 @@
+/* --- Pay choice section --- */
+.pay-choice {
+  background: #faf3ea;
+  padding: 4rem 0 8rem;
+}
+
+.pay-choice__title {
+  font-size: clamp(2.25rem, 5.5vw, 4.75rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #3d2310;
+  margin: 0;
+  max-width: 1100px;
+}
+
+@media (min-width: 721px) {
+  .pay-choice { padding-top: 22rem; }
+  .pay-choice__title {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: 22rem;
+    color: #000;
+    font-size: clamp(2.75rem, 4.5vw, 4rem);
+    line-height: 1.05;
+  }
+}
+
+@media (max-width: 720px) {
+  .pay-choice { padding: 4rem 0 5rem; }
+}

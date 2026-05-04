@@ -1,0 +1,47 @@
+.color-bridge {
+  --bridge-p: 0;
+  position: relative;
+  width: 100%;
+}
+
+.color-bridge--white-to-navy {
+  height: 150vh;
+}
+
+.color-bridge__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.color-bridge--white-to-navy .color-bridge__sticky {
+  --t: clamp(0, calc(var(--bridge-p) * 1.7), 1);
+  background-color: rgb(
+    calc(255 - var(--t) * 255),
+    calc(255 - var(--t) * 235),
+    calc(255 - var(--t) * 202)
+  );
+}
+
+.color-bridge--navy-to-cream {
+  height: 150vh;
+}
+
+.color-bridge--navy-to-cream .color-bridge__sticky {
+  --t: clamp(0, calc(var(--bridge-p) * 1.7), 1);
+  background-color: rgb(
+    calc(0 + var(--t) * 246),
+    calc(20 + var(--t) * 211),
+    calc(53 + var(--t) * 165)
+  );
+}
+
+@media (max-width: 720px) {
+  .color-bridge--white-to-navy {
+    height: 130vh;
+  }
+  .color-bridge--navy-to-cream {
+    height: 130vh;
+  }
+}

@@ -4,6 +4,10 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Services from './pages/Services.jsx'
 import Contact from './pages/Contact.jsx'
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
+import TermsOfService from './pages/TermsOfService.jsx'
+import CardTerms from './pages/CardTerms.jsx'
+import ESignConsent from './pages/ESignConsent.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
@@ -14,6 +18,10 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/card-terms" element={<CardTerms />} />
+        <Route path="/esign-consent" element={<ESignConsent />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

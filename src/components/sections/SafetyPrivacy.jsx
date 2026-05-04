@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import './SafetyPrivacy.css'
 import safetyPrivacyImg from '../../assets/images/pexels-gustavo-fring-4148845.jpg'
 import safetyPrivacyTopImg from '../../assets/images/pexels-silverkblack-36812950.jpg'
 
@@ -56,7 +57,7 @@ export default function SafetyPrivacy() {
         el.style.setProperty('--rise-text-p', textProgress.toFixed(4))
         const textProgressFast = Math.min(progress * 8, 1)
         el.style.setProperty('--rise-text-p-fast', textProgressFast.toFixed(4))
-        const downStart = isMobile ? 0.38 : 0.25
+        const downStart = isMobile ? 0.31 : 0.23
         const downProgress = Math.min(Math.max((progress - downStart) / (1 - downStart), 0), 1)
         el.style.setProperty('--rise-down-p', downProgress.toFixed(4))
       })

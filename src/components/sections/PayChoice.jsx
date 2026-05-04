@@ -1,3 +1,5 @@
+import './PayChoice.css'
+
 export default function PayChoice() {
   return (
     <section className="pay-choice">

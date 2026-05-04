@@ -25,9 +25,6 @@ export default function Home() {
       <SaveSmarter />
       <MoneyWorkHarder />
       <SavingsAccount />
-      <ColorBridge variant="white-to-navy" />
-      <CryptoEasyWay />
-      <ColorBridge variant="navy-to-cream" />
       <AllInApp />
     </div>
   )

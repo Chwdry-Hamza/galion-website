@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import heroCardImg from '../../assets/images/hero-card.jpg'
+import './HeroScroll.css'
 
 export default function HeroScroll() {
   const [selected, setSelected] = useState('personal')

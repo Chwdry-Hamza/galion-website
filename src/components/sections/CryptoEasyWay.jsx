@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import './CryptoEasyWay.css'
 
 const CRYPTO_LIST = [
   { name: 'Galion USD', symbol: 'G' },

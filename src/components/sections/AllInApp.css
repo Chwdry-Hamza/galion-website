@@ -1,0 +1,59 @@
+/* --- All in the Galion app section --- */
+.all-in-app {
+  --app-p: 0;
+  position: relative;
+  background: #f6e7da;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-in-app__inner {
+  width: 100%;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.all-in-app__title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(4rem, 14vw, 12rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.all-in-app__line {
+  --line-t: 0;
+  color: rgb(
+    calc(246 - var(--line-t) * 246),
+    calc(231 - var(--line-t) * 211),
+    calc(218 - var(--line-t) * 165)
+  );
+  transition: color 0.15s linear;
+}
+
+.all-in-app__line--1 {
+  --line-t: clamp(0, calc(var(--app-p) * 3), 1);
+}
+
+.all-in-app__line--2 {
+  --line-t: clamp(0, calc((var(--app-p) - 0.33) * 3), 1);
+}
+
+.all-in-app__line--3 {
+  --line-t: clamp(0, calc((var(--app-p) - 0.66) * 3), 1);
+}
+
+@media (max-width: 720px) {
+  .all-in-app {
+    min-height: 80vh;
+  }
+  .all-in-app__title {
+    font-size: clamp(3rem, 18vw, 6rem);
+  }
+}

@@ -1,3 +1,5 @@
+import './MoneyWorkHarder.css'
+
 export default function MoneyWorkHarder() {
   return (
     <section className="money-harder">

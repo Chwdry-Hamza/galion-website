@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import './Brands.css'
 import adidasImg from '../../assets/images/adidas-gazelle.jpg'
 import sonyImg from '../../assets/images/sony-headphones.jpg'
 import adidasLogo from '../../assets/images/adidas-logo.jpg'

@@ -1,0 +1,63 @@
+/* --- Feature split section --- */
+.feature-split {
+  background: #faf3ea;
+  padding: 6rem 0;
+}
+
+.feature-split__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: stretch;
+}
+
+.feature-split__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding: 1rem 0;
+}
+
+.feature-split__title {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #3d2310;
+  margin: 0;
+}
+
+.feature-split__desc {
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: #3d2310;
+  max-width: 460px;
+  margin: 0;
+}
+
+.feature-split__desc sup {
+  font-size: 0.65em;
+  margin-left: 1px;
+}
+
+.feature-split__media {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 20px 50px rgba(106, 61, 28, 0.18);
+}
+
+@media (max-width: 900px) {
+  .feature-split { padding: 4rem 0; }
+  .feature-split__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .feature-split__media {
+    aspect-ratio: 4 / 3;
+  }
+}

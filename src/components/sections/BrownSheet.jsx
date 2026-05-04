@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import './BrownSheet.css'
 import sendPizzaImg from '../../assets/images/istockphoto-2209673866-612x612.jpg'
 import restaurantsImg from '../../assets/images/restaurants.jpg'
 import featureSplitImg from '../../assets/images/feature-split.webp'

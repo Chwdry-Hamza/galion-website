@@ -1,3 +1,4 @@
+import './PayStack.css'
 import payIn4Img from '../../assets/images/pay-in-4.jpg'
 import payMonthlyImg from '../../assets/images/pay-monthly.webp'
 import payInStoreImg from '../../assets/images/surfer.png'

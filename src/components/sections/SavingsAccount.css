@@ -1,0 +1,187 @@
+/* --- Savings account section --- */
+.savings-account {
+  background: #ffffff;
+  padding: 16rem 0 3rem;
+}
+
+.savings-account__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.savings-account__title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(1.75rem, 3.8vw, 3.25rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #001435;
+  margin: 1rem 0 0 6rem;
+}
+
+.savings-account__title sup {
+  font-size: 0.45em;
+  font-weight: 900;
+  vertical-align: super;
+  line-height: 0;
+  letter-spacing: 0;
+}
+
+.savings-account__right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding-top: 1rem;
+}
+
+.savings-account__desc {
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  line-height: 1.5;
+  color: #001435;
+  margin: 0;
+}
+
+.savings-account__btn {
+  align-self: flex-start;
+  background: #ffffff;
+  color: #001435;
+  border: 1.5px solid #001435;
+  border-radius: 999px;
+  padding: 0.85rem 2.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.savings-account__fine {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #545d68;
+  margin: 0;
+}
+
+.savings-chart {
+  margin: 4rem auto 0;
+  background: #5cb6ff;
+  border-radius: 1.5rem;
+  padding: 2.5rem 3rem 2rem;
+  color: #001435;
+  max-width: 760px;
+}
+
+.savings-chart__title {
+  margin: 0 0 2.5rem;
+  font-size: clamp(1.25rem, 1.75vw, 1.65rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.savings-chart__bars {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  align-items: end;
+  height: 170px;
+}
+
+.savings-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  gap: 0.75rem;
+}
+
+.savings-bar__label {
+  font-weight: 800;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  min-height: 2.2rem;
+  justify-content: flex-end;
+}
+
+.savings-bar__amount {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.savings-bar__caret {
+  font-size: 0.75rem;
+  line-height: 0.6;
+}
+
+.savings-bar__pair {
+  display: flex;
+  flex: 1;
+  gap: 0.4rem;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.savings-bar__track {
+  width: 22px;
+  max-width: 26px;
+  background: #ffffff;
+  border-radius: 999px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.savings-bar__fill {
+  width: 100%;
+  background: #1f3791;
+  border-radius: 999px;
+}
+
+.savings-chart__fine {
+  margin: 1.5rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #001435;
+}
+
+@media (max-width: 720px) {
+  .savings-chart {
+    margin-top: 2rem;
+    padding: 1.5rem 1.25rem 1.25rem;
+    border-radius: 1rem;
+  }
+  .savings-chart__bars {
+    height: 180px;
+    gap: 0.5rem;
+  }
+  .savings-bar__pair {
+    gap: 0.25rem;
+  }
+  .savings-bar__track {
+    width: 18px;
+    max-width: 22px;
+  }
+  .savings-bar__amount {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .savings-account {
+    padding: 2rem 0 4rem;
+  }
+  .savings-account__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .savings-account__title {
+    font-size: clamp(2rem, 9vw, 3rem);
+    margin: 10vh 0 0;
+    line-height: 1.05;
+  }
+}

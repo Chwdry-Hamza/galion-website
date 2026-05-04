@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import './SaveSmarter.css'
 import saveSmarterImg from '../../assets/images/image_b47dd024.png'
 
 export default function SaveSmarter() {

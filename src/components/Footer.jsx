@@ -1,32 +1,17 @@
 import { Link } from 'react-router-dom'
 
 const primaryLinks = [
-  { label: 'Help', to: '/help' },
-  { label: 'Contact', to: '/contact' },
-  { label: 'Fees', to: '/fees' },
-  { label: 'Security Center', to: '/security' },
-  { label: 'Privacy Center', to: '/privacy' },
-  { label: 'Shop', to: '/shop' },
-  { label: 'Apps', to: '/apps' },
-  { label: 'Enterprise', to: '/enterprise' },
-  { label: 'Partners', to: '/partners' },
-]
-
-const secondaryLinks = [
   { label: 'About', to: '/about' },
-  { label: 'Newsroom', to: '/newsroom' },
-  { label: 'Jobs', to: '/jobs' },
-  { label: 'Investor Relations', to: '/investors' },
-  { label: 'Government Relations', to: '/government' },
+  { label: 'Privacy Policy', to: '/privacy-policy' },
+  { label: 'Terms and Conditions', to: '/terms' },
 ]
 
-const legalLinks = [
-  { label: 'Accessibility', to: '/accessibility' },
-  { label: 'Privacy Statement', to: '/privacy-statement' },
-  { label: 'Cookies', to: '/cookies' },
-  { label: 'Legal', to: '/legal' },
-  { label: 'Licenses', to: '/licenses' },
-]
+const secondaryLinks = []
+
+
+
+const legalLinks = []
+
 
 function Globe() {
   return (
@@ -59,22 +44,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer__row footer__row--secondary">
-          <nav className="footer__links">
-            {secondaryLinks.map((l) => (
-              <Link key={l.to} to={l.to}>{l.label}</Link>
-            ))}
-          </nav>
-          <div className="footer__legal">
-            <span className="footer__copy">&copy; 1999-{year}</span>
-            {legalLinks.map((l) => (
-              <Link key={l.to} to={l.to}>{l.label}</Link>
-            ))}
-          </div>
-        </div>
-
         <p className="footer__address">
-          Galion is located at 2211 N 1st St. San Jose, CA 95131
+          &copy; 1999-{year} · Galion is located at 2211 N 1st St. San Jose, CA 95131
         </p>
       </div>
     </footer>

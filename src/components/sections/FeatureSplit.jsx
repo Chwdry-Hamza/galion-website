@@ -1,4 +1,5 @@
 import featureSplitImg from '../../assets/images/feature-split.webp'
+import './FeatureSplit.css'
 
 export default function FeatureSplit() {
   return (

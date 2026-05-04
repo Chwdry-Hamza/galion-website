@@ -5,28 +5,128 @@ import Logo from './Logo.jsx'
 const menu = [
   {
     label: 'Personal',
-    items: [
-      { label: 'Send Money', to: '/personal/send' },
-      { label: 'Receive Money', to: '/personal/receive' },
-      { label: 'Shopping', to: '/personal/shopping' },
-      { label: 'Rewards', to: '/personal/rewards' },
-    ],
+    mega: {
+      title: 'Galion for You',
+      to: '/personal',
+      columns: [
+        {
+          title: 'Shopping & Rewards',
+          links: [
+            { label: 'Buy Now, Pay Later', to: '/personal/bnpl' },
+            { label: 'Rewards', to: '/personal/rewards' },
+            { label: 'Galion credit and cards', to: '/personal/cards' },
+            { label: 'Galion Debit Card', to: '/personal/debit' },
+            { label: 'Paying with Galion', to: '/personal/paying' },
+          ],
+        },
+        {
+          title: 'Send & Receive',
+          links: [
+            { label: 'Send money', to: '/personal/send' },
+            { label: 'Request money', to: '/personal/request' },
+            { label: 'Pool money', to: '/personal/pool' },
+            { label: 'Donate', to: '/personal/donate' },
+            { label: 'Start selling', to: '/personal/sell' },
+          ],
+        },
+        {
+          title: 'Manage Your Money',
+          links: [
+            { label: 'Add cards and banks', to: '/personal/add-cards' },
+            { label: 'Security and safety', to: '/personal/security' },
+            { label: 'Set up Direct Deposit', to: '/personal/deposit' },
+            { label: 'Add cash', to: '/personal/cash' },
+            { label: 'Subscriptions', to: '/personal/subscriptions' },
+            { label: 'Savings and goals', to: '/personal/savings' },
+            { label: 'Cryptocurrency', to: '/personal/crypto' },
+          ],
+        },
+      ],
+      cta: [
+        { label: 'Get the App', to: '/get-app', primary: true },
+        { label: 'How Galion Works', to: '/how-it-works', primary: true },
+        { label: 'Money Hub', to: '/money-hub', primary: true },
+      ],
+    },
   },
   {
     label: 'Business',
-    items: [
-      { label: 'Accept Payments', to: '/business/payments' },
-      { label: 'Invoicing', to: '/business/invoicing' },
-      { label: 'Business Tools', to: '/business/tools' },
-    ],
+    mega: {
+      title: 'Galion Open',
+      subtitle: 'The platform for all business',
+      to: '/business',
+      columns: [
+        {
+          title: 'Business Types',
+          links: [
+            { label: 'Enterprises', to: '/business/enterprises' },
+            { label: 'Small Businesses', to: '/business/small' },
+            { label: 'Solopreneurs', to: '/business/solopreneurs' },
+            { label: 'Partners', to: '/business/partners' },
+            { label: 'Platforms', to: '/business/platforms' },
+            { label: 'Industries', to: '/business/industries' },
+            { label: 'Developers', to: '/business/developers' },
+            { label: 'Advertisers', to: '/business/advertisers' },
+          ],
+        },
+        {
+          title: 'Accept Payments',
+          links: [
+            { label: 'Online Checkout', to: '/business/checkout' },
+            { label: 'Installment Payments', to: '/business/installments' },
+            { label: 'Guest Checkout', to: '/business/guest-checkout' },
+            { label: 'Accept Galion', to: '/business/accept-galion' },
+            { label: 'POS System', to: '/business/pos' },
+            { label: 'Invoicing', to: '/business/invoicing' },
+            { label: 'Payment Links', to: '/business/payment-links' },
+            { label: 'Enterprise Payments', to: '/business/enterprise-payments' },
+            { label: 'Tap to Pay', to: '/business/tap-to-pay' },
+          ],
+        },
+        {
+          title: 'Risk & Operations',
+          links: [
+            { label: 'Make Payments', to: '/business/make-payments' },
+            { label: 'Risk Management', to: '/business/risk' },
+            { label: 'Reporting Tools', to: '/business/reporting' },
+            { label: 'Shipping', to: '/business/shipping' },
+            { label: 'Agentic Commerce', to: '/business/agentic' },
+          ],
+        },
+        {
+          title: 'Financial Services',
+          links: [
+            { label: 'Working Capital Loan', to: '/business/working-capital' },
+            { label: 'Business Loan', to: '/business/loan' },
+            { label: 'Business Debit Card', to: '/business/debit-card' },
+          ],
+        },
+      ],
+      cta: [
+        { label: 'Get Started', to: '/business/start', primary: true },
+        { label: 'Fees', to: '/business/fees', primary: true },
+        { label: 'Payment Methods', to: '/business/payment-methods' },
+        { label: '3rd Party Integrations', to: '/business/integrations' },
+        { label: 'Business Resource Center', to: '/business/resources' },
+        { label: 'Events', to: '/business/events' },
+      ],
+    },
   },
   {
     label: 'Advertiser',
-    items: [
-      { label: 'Overview', to: '/advertiser' },
-      { label: 'Campaigns', to: '/advertiser/campaigns' },
-      { label: 'Analytics', to: '/advertiser/analytics' },
-    ],
+    mega: {
+      title: 'Galion Ads',
+      to: '/advertiser',
+      columns: [
+        {
+          links: [
+            { label: 'About Galion Ads', to: '/advertiser/about' },
+            { label: 'Galion Ads Solutions', to: '/advertiser/solutions' },
+            { label: 'Galion Ads Resources', to: '/advertiser/resources' },
+          ],
+        },
+      ],
+    },
   },
   { label: 'Developer', to: '/developer' },
 ]
@@ -35,6 +135,14 @@ function Chevron() {
   return (
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
       <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
+
+function Arrow() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   )
 }
@@ -56,6 +164,11 @@ export default function Navbar() {
 
   const toggleDropdown = (label) => {
     setOpenDropdown((cur) => (cur === label ? null : label))
+  }
+
+  const closeAll = () => {
+    setOpenDropdown(null)
+    setMobileOpen(false)
   }
 
   return (
@@ -81,7 +194,7 @@ export default function Navbar() {
         >
           <ul className="navbar__menu">
             {menu.map((item) =>
-              item.items ? (
+              item.mega ? (
                 <li
                   key={item.label}
                   className={`navbar__item has-dropdown ${
@@ -96,21 +209,87 @@ export default function Navbar() {
                     {item.label}
                     <Chevron />
                   </button>
-                  <ul className="navbar__dropdown">
-                    {item.items.map((sub) => (
-                      <li key={sub.to}>
+
+                  <div
+                    className={`navbar__mega ${
+                      item.mega.columns.length === 1 ? 'navbar__mega--narrow' : ''
+                    } ${item.mega.cta ? 'navbar__mega--with-cta' : ''}`}
+                    role="menu"
+                  >
+                    <div className="navbar__mega-inner">
+                      <div className="navbar__mega-cols">
                         <Link
-                          to={sub.to}
-                          onClick={() => {
-                            setOpenDropdown(null)
-                            setMobileOpen(false)
+                          to={item.mega.to}
+                          className="navbar__mega-title"
+                          onClick={closeAll}
+                        >
+                          <span>{item.mega.title}</span>
+                          <Arrow />
+                        </Link>
+                        {item.mega.subtitle && (
+                          <p className="navbar__mega-subtitle">{item.mega.subtitle}</p>
+                        )}
+
+                        <div
+                          className="navbar__mega-grid"
+                          style={{
+                            gridTemplateColumns: `repeat(${item.mega.columns.length}, minmax(0, 1fr))`,
                           }}
                         >
-                          {sub.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                          {item.mega.columns.map((col, idx) => (
+                            <div className="navbar__mega-col" key={idx}>
+                              {col.title && (
+                                <Link
+                                  to={item.mega.to}
+                                  className="navbar__mega-col-title"
+                                  onClick={closeAll}
+                                >
+                                  <span>{col.title}</span>
+                                  <Arrow />
+                                </Link>
+                              )}
+                              <ul className="navbar__mega-list">
+                                {col.links.map((sub) => (
+                                  <li key={sub.to}>
+                                    <Link to={sub.to} onClick={closeAll}>
+                                      {sub.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {item.mega.cta && (
+                        <aside className="navbar__mega-cta">
+                          {item.mega.cta.map((c) =>
+                            c.primary ? (
+                              <Link
+                                key={c.to}
+                                to={c.to}
+                                className="navbar__mega-cta-btn"
+                                onClick={closeAll}
+                              >
+                                <span>{c.label}</span>
+                                <Arrow />
+                              </Link>
+                            ) : (
+                              <Link
+                                key={c.to}
+                                to={c.to}
+                                className="navbar__mega-cta-link"
+                                onClick={closeAll}
+                              >
+                                {c.label}
+                              </Link>
+                            )
+                          )}
+                        </aside>
+                      )}
+                    </div>
+                  </div>
                 </li>
               ) : (
                 <li key={item.label} className="navbar__item">
@@ -132,8 +311,8 @@ export default function Navbar() {
             <Link to="/help" className="navbar__help" onClick={() => setMobileOpen(false)}>
               Help
             </Link>
-            <Link to="/login" className="navbar__login" onClick={() => setMobileOpen(false)}>
-              Log In
+            <Link to="/contact" className="navbar__login" onClick={() => setMobileOpen(false)}>
+              Contact Us
             </Link>
           </div>
         </nav>

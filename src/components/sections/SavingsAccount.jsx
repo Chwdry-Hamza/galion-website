@@ -1,3 +1,5 @@
+import './SavingsAccount.css'
+
 const SAVINGS_BARS = [
   { label: 'Jan', fills: [16, 22] },
   { label: 'Mar', fills: [28, 34] },

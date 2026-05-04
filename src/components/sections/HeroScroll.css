@@ -1,0 +1,183 @@
+/* --- Scroll-driven hero --- */
+.hero-scroll {
+  --p: 0;
+  position: relative;
+  height: 260vh;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(247, 232, 220, 0.9) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 80%, rgba(232, 199, 174, 0.8) 0%, transparent 60%),
+    linear-gradient(135deg, #f7e8dc 0%, #efd9c2 50%, #e8c7ae 100%);
+}
+
+.hero-scroll__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: clamp(4rem, 8vh, 6rem);
+  overflow: hidden;
+}
+
+.hero-scroll__headline-wrap {
+  text-align: center;
+  width: 100%;
+  padding: 0 2rem;
+  transform: translateY(calc(var(--p) * -55vh));
+  opacity: calc(1 - var(--p) * 2.5);
+  transition: opacity 0.05s linear;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-scroll .hero__toggle {
+  margin-bottom: 2rem;
+}
+
+.hero-scroll .hero__headline {
+  color: #3d2310;
+  font-weight: 900;
+  font-size: clamp(2.75rem, 6.5vw, 5.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* The card that grows on scroll */
+.hero-card {
+  --start-w: min(680px, 78vw);
+  --start-h: 45vh;
+  --start-top: 56vh;
+  --end-w: calc(100vw - 32px);
+  --end-h: calc(100vh - 32px);
+  --end-top: 16px;
+
+  position: absolute;
+  left: 50%;
+  top: calc(var(--start-top) - (var(--start-top) - var(--end-top)) * var(--p));
+  width: calc(var(--start-w) + (var(--end-w) - var(--start-w)) * var(--p));
+  height: calc(var(--start-h) + (var(--end-h) - var(--start-h)) * var(--p));
+  transform: translateX(-50%);
+  border-radius: calc(24px - 8px * var(--p));
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(217, 165, 119, 0.95) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 80%, rgba(140, 80, 40, 0.95) 0%, transparent 60%),
+    linear-gradient(135deg, #c98951 0%, #a06a3c 50%, #6a3d1c 100%);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(106, 61, 28, calc(0.4 * (1 - var(--p) * 0.4)));
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  padding: calc(6px + 6px * var(--p));
+}
+
+.hero-card__brand {
+  flex-shrink: 0;
+  text-align: center;
+  font-weight: 900;
+  font-size: clamp(1.25rem, calc(1.25rem + 0.7vw * var(--p)), 2rem);
+  color: #fdf6ee;
+  opacity: calc(1 - var(--p) * 0.55);
+  padding: calc(0.65rem + 0.4rem * var(--p)) 0;
+  letter-spacing: -0.02em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: transparent;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.hero-card__media {
+  position: relative;
+  flex: 1;
+  border-radius: calc(6px + 4px * var(--p));
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Text overlays on the image — fade in as scale ramps up */
+.hero-card__word {
+  position: absolute;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  color: #fdf6ee;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  font-size: clamp(2rem, calc(2rem + 9vw * var(--p)), 11vw);
+  opacity: calc((var(--p) - 0.25) * 2.2);
+  pointer-events: none;
+}
+
+.hero-card__word--tl {
+  top: calc(2% + 2vh * var(--p));
+  left: calc(2% + 2vw * var(--p));
+}
+
+.hero-card__word--br {
+  bottom: calc(2% + 2vh * var(--p));
+  right: calc(2% + 2vw * var(--p));
+}
+
+.hero__toggle {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1.5px solid #3d2310;
+  border-radius: 999px;
+  padding: 3px;
+  margin-bottom: 2.5rem;
+}
+
+.hero__toggle-btn {
+  background: transparent;
+  border: 0;
+  padding: 0.5rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #3d2310;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero__toggle-btn.is-active {
+  background: #3d2310;
+  color: #ffffff;
+}
+
+@media (max-width: 720px) {
+  .hero-scroll__sticky {
+    padding-top: 4.5rem;
+  }
+  .hero-scroll .hero__toggle {
+    margin-bottom: 4rem;
+  }
+  .hero-card {
+    --start-w: 88vw;
+    --start-h: 48vh;
+    --start-top: 58vh;
+    --end-w: 100vw;
+    --end-h: 100vh;
+    --end-top: 0px;
+    padding: 6px;
+    border-radius: calc(24px - 24px * var(--p));
+  }
+  .hero-card__media {
+    border-radius: 6px;
+  }
+  .hero-card__brand {
+    padding: 0.65rem 0;
+    font-size: 1.25rem;
+    overflow: hidden;
+  }
+  .hero-card__word {
+    font-size: clamp(4rem, calc(4rem + 16vw * var(--p)), 22vw);
+  }
+  .hero-scroll__headline-wrap { padding: 0 1.25rem; }
+}

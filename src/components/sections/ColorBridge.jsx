@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import './ColorBridge.css'
 
 export default function ColorBridge({ variant = 'white-to-navy' }) {
   const ref = useRef(null)
