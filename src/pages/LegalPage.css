@@ -194,7 +194,7 @@
 }
 
 /* --- Help block --- */
-.legal-help {
+.legal-content .legal-help {
   margin-top: 4rem;
   background: #001435;
   color: #ffffff;
@@ -207,7 +207,7 @@
   gap: 1.5rem;
 }
 
-.legal-help__title {
+.legal-content .legal-help__title {
   font-size: clamp(1.25rem, 2.4vw, 1.75rem);
   font-weight: 800;
   letter-spacing: -0.015em;
@@ -215,14 +215,14 @@
   margin: 0 0 0.4rem;
 }
 
-.legal-help__desc {
+.legal-content .legal-help__desc {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
   max-width: 520px;
 }
 
-.legal-help__btn {
+.legal-content .legal-help__btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -233,10 +233,11 @@
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: -0.01em;
+  text-decoration: none;
   transition: background 0.15s, transform 0.15s;
 }
 
-.legal-help__btn:hover {
+.legal-content .legal-help__btn:hover {
   background: #d9a577;
   color: #001435;
   transform: translateY(-1px);

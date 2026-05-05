@@ -8,6 +8,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 import TermsOfService from './pages/TermsOfService.jsx'
 import CardTerms from './pages/CardTerms.jsx'
 import ESignConsent from './pages/ESignConsent.jsx'
+import ComingSoon from './pages/ComingSoon.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
@@ -22,6 +23,10 @@ export default function App() {
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/card-terms" element={<CardTerms />} />
         <Route path="/esign-consent" element={<ESignConsent />} />
+        <Route path="/personal/send" element={<ComingSoon />} />
+        <Route path="/personal/paying" element={<ComingSoon />} />
+        <Route path="/personal/savings" element={<ComingSoon />} />
+        <Route path="/personal/crypto" element={<ComingSoon />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
