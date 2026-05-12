@@ -12,17 +12,16 @@ export default function PayStack() {
         <div className="container pay-in-4__inner">
           <div className="pay-in-4__panel">
             <h2 className="pay-in-4__title">
-              Pay in 4<br />interest-free<br />payments
+              Spend crypto<br />anywhere in<br />the world
             </h2>
             <div className="pay-in-4__bottom">
               <p className="pay-in-4__desc">
-                Paid every two weeks.<br className="mobile-br" />
-                {' '}No late fees. Won&rsquo;t<br className="mobile-br" />
-                {' '}affect your credit score<br className="mobile-br" />
-                {' '}to apply.<sup>4</sup>
+                Tap, swipe, or pay online with the<br className="mobile-br" />
+                {' '}Galion card. Your crypto converts<br className="mobile-br" />
+                {' '}to fiat the moment you check out.
               </p>
               <button type="button" className="pay-in-4__btn">
-                Learn About Pay<br className="mobile-br" />{' '}in 4
+                Get the Galion<br className="mobile-br" />{' '}Card
               </button>
             </div>
           </div>
@@ -38,16 +37,16 @@ export default function PayStack() {
         <div className="container pay-in-4__inner">
           <div className="pay-in-4__panel pay-in-4__panel--blue">
             <h2 className="pay-in-4__title">
-              Pay Monthly in 3,<br />6, 12, or 24<br />payments
+              Send and<br />receive crypto<br />in seconds
             </h2>
             <div className="pay-in-4__bottom">
               <p className="pay-in-4__desc">
-                With $0 down.<br />
-                No sign-up fees<br className="mobile-br" />
-                {' '}or late fees.<sup>5</sup>
+                Move USDT, USDC, TRX, or ETH<br />
+                to anyone, anywhere — no banks,<br className="mobile-br" />
+                {' '}no borders, no waiting.
               </p>
               <button type="button" className="pay-in-4__btn pay-in-4__btn--dark">
-                Learn About<br className="mobile-br" />{' '}Pay Monthly
+                Open Your<br className="mobile-br" />{' '}Wallet
               </button>
             </div>
           </div>
@@ -63,16 +62,16 @@ export default function PayStack() {
         <div className="container pay-in-4__inner">
           <div className="pay-in-4__panel pay-in-4__panel--gray">
             <h2 className="pay-in-4__title">
-              Pay Monthly<br />in store<sup>5</sup>
+              Tap to pay<br />at any store
             </h2>
             <div className="pay-in-4__bottom">
               <p className="pay-in-4__desc">
-                Buy an item you&rsquo;d like<br className="mobile-br" />
-                {' '}to purchase now but would<br className="mobile-br" />
-                {' '}prefer to pay for over time.
+                Use your Galion card anywhere<br className="mobile-br" />
+                {' '}Mastercard is accepted. Crypto<br className="mobile-br" />
+                {' '}converts to fiat at the terminal.
               </p>
               <button type="button" className="pay-in-4__btn pay-in-4__btn--dark">
-                Learn About Pay<br className="mobile-br" />{' '}Monthly In Store
+                See Where<br className="mobile-br" />{' '}It Works
               </button>
             </div>
           </div>
@@ -88,17 +87,17 @@ export default function PayStack() {
         <div className="container pay-in-4__inner">
           <div className="pay-in-4__panel pay-in-4__panel--peach">
             <h2 className="pay-in-4__title">
-              Pay with the<br />Galion Cashback<br />Mastercard<sup>&reg;</sup>
+              Pay in any<br />currency, hold<br />in crypto
             </h2>
             <div className="pay-in-4__bottom">
               <p className="pay-in-4__desc">
-                Earn 3% cash back when<br className="mobile-br" />
-                {' '}you check out with Galion<br className="mobile-br" />
-                {' '}and 1.5% on all other<br className="mobile-br" />
-                {' '}Mastercard purchases.<sup>6</sup>
+                Travel anywhere. The card auto-<br className="mobile-br" />
+                {' '}converts your crypto to local<br className="mobile-br" />
+                {' '}currency — USD, EUR, GBP,<br className="mobile-br" />
+                {' '}AED, and more.
               </p>
               <button type="button" className="pay-in-4__btn pay-in-4__btn--dark">
-                Apply for<br className="mobile-br" />{' '}the Credit Card
+                Supported<br className="mobile-br" />{' '}Currencies
               </button>
             </div>
           </div>
@@ -114,17 +113,16 @@ export default function PayStack() {
         <div className="container pay-in-4__inner">
           <div className="pay-in-4__panel pay-in-4__panel--gray">
             <h2 className="pay-in-4__title">
-              Special financing<br />with the Galion<br />Credit Card
+              Your crypto,<br />your money,<br />your way
             </h2>
             <div className="pay-in-4__bottom">
               <p className="pay-in-4__desc">
-                Enjoy special financing<br className="mobile-br" />
-                {' '}on all purchases of $149+<br className="mobile-br" />
-                {' '}everywhere Galion or<br className="mobile-br" />
-                {' '}Mastercard is accepted.<sup>7</sup>
+                Hold, send, spend — all from<br className="mobile-br" />
+                {' '}one app. Galion is the bridge<br className="mobile-br" />
+                {' '}between crypto and the real world.
               </p>
               <button type="button" className="pay-in-4__btn pay-in-4__btn--dark">
-                Learn More
+                Get Started
               </button>
             </div>
           </div>

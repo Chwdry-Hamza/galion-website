@@ -5,7 +5,7 @@ export default function PayChoice() {
     <section className="pay-choice">
       <div className="container">
         <h2 className="pay-choice__title">
-          Pay now or pay over time.<br />It&rsquo;s your choice.
+          Crypto in your pocket.<br />Spendable anywhere.
         </h2>
       </div>
     </section>

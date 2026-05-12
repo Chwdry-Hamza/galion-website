@@ -5,7 +5,7 @@ const SAVINGS_BARS = [
   { label: 'Mar', fills: [28, 34] },
   { label: 'May', fills: [42, 50] },
   { label: 'Jul', fills: [54, 62] },
-  { label: '$959', fills: [76, 88], highlight: true },
+  { label: '$284', fills: [76, 88], highlight: true },
 ]
 
 export default function SavingsAccount() {
@@ -13,31 +13,29 @@ export default function SavingsAccount() {
     <section className="savings-account">
       <div className="container savings-account__inner">
         <h2 className="savings-account__title">
-          Get 3.40% APY<sup>11</sup><br />
-          with your Galion<br />
-          Savings account
+          Earn up to 2% back<br />
+          every time you<br />
+          tap your Galion card
         </h2>
         <div className="savings-account__right">
           <p className="savings-account__desc">
-            It&rsquo;s free to set up, FDIC insured with and held at
-            Synchrony Bank&ndash;and you can roll in all the rewards you
-            earn with Galion so you earn even more.
+            Every purchase earns crypto cashback &mdash; paid directly to
+            your wallet. Spend on groceries, fuel, travel, or online, and
+            watch your rewards stack up automatically.
           </p>
-          <button type="button" className="savings-account__btn">Start Saving</button>
+          <button type="button" className="savings-account__btn">Get the Card</button>
           <p className="savings-account__fine">
-            Galion is a financial technology company, not a bank, and is
-            not FDIC-insured. FDIC insurance protects against the failure
-            of Synchrony Bank, Member FDIC, not the failure of Galion. Any
-            cryptocurrencies you hold in your Galion account are not
-            deposits, are not eligible for pass-through FDIC insurance and
-            may lose value.
+            Cashback is paid in USDC and credited to your Galion wallet
+            within 24 hours of each settled transaction. Rewards rate may
+            vary by merchant category. Cryptocurrency values fluctuate
+            and may lose value.
           </p>
         </div>
       </div>
 
       <div className="container">
         <div className="savings-chart">
-          <h3 className="savings-chart__title">Total Galion Savings</h3>
+          <h3 className="savings-chart__title">Total Cashback Earned</h3>
           <div className="savings-chart__bars">
             {SAVINGS_BARS.map((b) => (
               <div key={b.label} className="savings-bar">
@@ -65,7 +63,7 @@ export default function SavingsAccount() {
             ))}
           </div>
           <p className="savings-chart__fine">
-            Average savings account value reflected as of 07/18/2023.
+            Example based on $14,000 in annual card spend.
           </p>
         </div>
       </div>

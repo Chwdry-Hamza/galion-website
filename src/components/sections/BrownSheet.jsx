@@ -5,7 +5,7 @@ import restaurantsImg from '../../assets/images/restaurants.jpg'
 import featureSplitImg from '../../assets/images/feature-split.webp'
 import safetyPrivacyImg from '../../assets/images/pexels-gustavo-fring-4148845.jpg'
 
-const TAB_OPTIONS = ['Send', 'Receive', 'Split', 'Pool']
+const TAB_OPTIONS = ['Send', 'Receive', 'Convert', 'Card']
 
 export default function BrownSheet() {
   const [sendOption, setSendOption] = useState('Send')
@@ -85,28 +85,29 @@ export default function BrownSheet() {
       status: 'Requesting',
       cardBtn: 'Share Galion Link',
     },
-    Split: {
-      variant: 'split',
-      caption: 'Simply split the bill with friends and family.',
-      cta: 'Share Costs',
+    Convert: {
+      variant: 'transfer',
+      caption: 'Crypto to fiat in seconds.',
+      cta: 'Start Converting',
       photo: featureSplitImg,
-      cardTitle: 'Split money from your contacts',
-      contacts: [
-        { initial: 'J', name: 'Jenny W.', amount: '$55' },
-        { initial: 'T', name: 'Tiffany T.', amount: '$55' },
-      ],
-      total: '$110',
-    },
-    Pool: {
-      variant: 'pool',
-      caption: (
-        <>Pool money up front for group<br />gifts and more.<sup>10</sup></>
+      cardTitle: (
+        <>Convert ETH <span aria-hidden="true">→</span> USD</>
       ),
-      cta: 'Start a Pool',
+      price: '$172.50',
+      status: 'Converting',
+      cardBtn: 'View Live Rate',
+    },
+    Card: {
+      variant: 'transfer',
+      caption: 'Tap your Galion card anywhere.',
+      cta: 'Get the Card',
       photo: safetyPrivacyImg,
-      cardTitle: 'Adam’s Gift',
-      price: '$250',
-      cardBtn: 'Transfer',
+      cardTitle: (
+        <>Coffee at Starbucks <span aria-hidden="true">☕</span></>
+      ),
+      price: '$8.25',
+      status: 'Approved',
+      cardBtn: 'View Transaction',
     },
   }
   const c = sendOptionContent[sendOption] ?? sendOptionContent.Send
