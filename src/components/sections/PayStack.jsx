@@ -66,12 +66,13 @@ export default function PayStack() {
             </h2>
             <div className="pay-in-4__bottom">
               <p className="pay-in-4__desc">
-                Use your Galion card anywhere<br className="mobile-br" />
-                {' '}Mastercard is accepted. Crypto<br className="mobile-br" />
-                {' '}converts to fiat at the terminal.
+                Spend your own crypto balance<br className="mobile-br" />
+                {' '}at any contactless terminal.<br className="mobile-br" />
+                {' '}Crypto converts to fiat at checkout —<br className="mobile-br" />
+                {' '}no credit, no borrowing.
               </p>
               <button type="button" className="pay-in-4__btn pay-in-4__btn--dark">
-                See Where<br className="mobile-br" />{' '}It Works
+                See How<br className="mobile-br" />{' '}It Works
               </button>
             </div>
           </div>
@@ -87,14 +88,14 @@ export default function PayStack() {
         <div className="container pay-in-4__inner">
           <div className="pay-in-4__panel pay-in-4__panel--peach">
             <h2 className="pay-in-4__title">
-              Pay in any<br />currency, hold<br />in crypto
+              Spend in any<br />currency, hold<br />in crypto
             </h2>
             <div className="pay-in-4__bottom">
               <p className="pay-in-4__desc">
-                Travel anywhere. The card auto-<br className="mobile-br" />
-                {' '}converts your crypto to local<br className="mobile-br" />
-                {' '}currency — USD, EUR, GBP,<br className="mobile-br" />
-                {' '}AED, and more.
+                Travel anywhere and spend<br className="mobile-br" />
+                {' '}your crypto in local currency —<br className="mobile-br" />
+                {' '}USD, EUR, GBP, AED, and more.<br className="mobile-br" />
+                {' '}Your wallet, your money.
               </p>
               <button type="button" className="pay-in-4__btn pay-in-4__btn--dark">
                 Supported<br className="mobile-br" />{' '}Currencies
