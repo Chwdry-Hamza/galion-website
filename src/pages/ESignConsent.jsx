@@ -64,7 +64,7 @@ const sections = [
     body: (
       <p>
         You may request a paper copy of any Record by writing to{' '}
-        <a href="mailto:support@galion.com">support@galion.com</a>. We may
+        <a href="mailto:info@galion.finance">info@galion.finance</a>. We may
         charge a reasonable fee for paper delivery as disclosed in our fee
         schedule. Requesting paper copies does not withdraw your consent to
         electronic delivery.
@@ -78,7 +78,7 @@ const sections = [
       <>
         <p>
           You may withdraw your consent to electronic Records at any time by
-          contacting <a href="mailto:support@galion.com">support@galion.com</a>.
+          contacting <a href="mailto:info@galion.finance">info@galion.finance</a>.
           Withdrawing consent may:
         </p>
         <ul>
@@ -111,7 +111,7 @@ const sections = [
     body: (
       <p>
         Questions about this E-Sign Consent? Reach out to{' '}
-        <a href="mailto:support@galion.com">support@galion.com</a> or visit
+        <a href="mailto:info@galion.finance">info@galion.finance</a> or visit
         our <a href="/help">Help Center</a>.
       </p>
     ),

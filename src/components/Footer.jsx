@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <p className="footer__address">
-          &copy; 1999-{year} · Galion is located at 2211 N 1st St. San Jose, CA 95131
+          &copy; 1999-{year} · Galion Fintech Portal LLC, Concord Tower, Media City, Dubai
         </p>
       </div>
     </footer>

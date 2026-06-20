@@ -66,7 +66,7 @@ const sections = [
       <p>
         You can access, update, or delete your information at any time from
         your account settings, or by emailing{' '}
-        <a href="mailto:privacy@galion.com">privacy@galion.com</a>.
+        <a href="mailto:info@galion.finance">info@galion.finance</a>.
       </p>
     ),
   },
@@ -86,8 +86,8 @@ const sections = [
     body: (
       <p>
         Questions? Email{' '}
-        <a href="mailto:privacy@galion.com">privacy@galion.com</a> or write
-        to Galion, 2211 N 1st St., San Jose, CA 95131.
+        <a href="mailto:info@galion.finance">info@galion.finance</a> or write
+        to Galion Fintech Portal LLC, Concord Tower, Media City, Dubai.
       </p>
     ),
   },

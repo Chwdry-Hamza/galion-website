@@ -30,7 +30,7 @@ const sections = [
       <p>
         You&rsquo;re responsible for keeping your credentials safe and for
         all activity on your account. Notify us at{' '}
-        <a href="mailto:security@galion.com">security@galion.com</a> if you
+        <a href="mailto:info@galion.finance">info@galion.finance</a> if you
         suspect unauthorized access.
       </p>
     ),
@@ -53,8 +53,8 @@ const sections = [
     body: (
       <p>
         Some features carry fees, which we&rsquo;ll always disclose before
-        you incur them. The full fee schedule is available at{' '}
-        <a href="/fees">galion.com/fees</a>.
+        you incur them. For fee information, please contact{' '}
+        <a href="mailto:info@galion.finance">info@galion.finance</a>.
       </p>
     ),
   },
@@ -107,8 +107,8 @@ const sections = [
     body: (
       <p>
         Questions? Email{' '}
-        <a href="mailto:legal@galion.com">legal@galion.com</a> or write to
-        Galion, 2211 N 1st St., San Jose, CA 95131.
+        <a href="mailto:info@galion.finance">info@galion.finance</a> or write to
+        Galion Fintech Portal LLC, Concord Tower, Media City, Dubai.
       </p>
     ),
   },

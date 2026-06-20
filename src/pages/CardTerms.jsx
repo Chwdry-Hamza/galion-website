@@ -78,7 +78,7 @@ const sections = [
       <p>
         If your Card is lost, stolen, or used without your authorization,
         freeze it instantly in the Galion app and contact{' '}
-        <a href="mailto:cards@galion.com">cards@galion.com</a>. Your
+        <a href="mailto:info@galion.finance">info@galion.finance</a>. Your
         liability for unauthorized transactions is limited under federal law
         (Regulation E for debit, Regulation Z for credit) when reported
         promptly.

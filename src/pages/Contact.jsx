@@ -5,25 +5,25 @@ const supportChannels = [
   {
     title: 'Email us',
     desc: 'We respond within one business day.',
-    value: 'support@galion.com',
-    href: 'mailto:support@galion.com',
+    value: 'info@galion.finance',
+    href: 'mailto:info@galion.finance',
   },
   {
     title: 'Talk to sales',
     desc: 'For partnerships and enterprise.',
-    value: 'sales@galion.com',
-    href: 'mailto:sales@galion.com',
+    value: 'support@galion.finance',
+    href: 'mailto:support@galion.finance',
   },
   {
     title: 'Call us',
-    desc: 'Mon–Fri, 9am–6pm PT.',
-    value: '+1 (888) 555-0142',
-    href: 'tel:+18885550142',
+    desc: 'Mon–Fri, 9am–6pm GST.',
+    value: '+971 3 564 8882',
+    href: 'tel:+97135648882',
   },
   {
     title: 'Visit us',
     desc: 'Our home office.',
-    value: '2211 N 1st St., San Jose, CA 95131',
+    value: '3308 Galion Fintech Portal LLC, Concord Tower, Media City, Dubai',
   },
 ]
 
