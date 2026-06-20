@@ -17,8 +17,8 @@ const supportChannels = [
   {
     title: 'Call us',
     desc: 'Mon–Fri, 9am–6pm GST.',
-    value: '+971 3 564 8882',
-    href: 'tel:+97135648882',
+    value: '+971 4 564 8882',
+    href: 'tel:+97145648882',
   },
   {
     title: 'Visit us',
